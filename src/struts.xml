@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 指定资源编码类型 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!-- 指定每次配置文件更改后，自动重新加载 -->
+    <constant name="struts.configuration.xml.reload" value="false"/>
+    <!-- 不拦截静态文件 -->
+    <constant name="struts.action.excludePattern" value="/static/.*?"/>
+
+    <!-- 默认 -->
+    <package name="default" namespace="/" extends="struts-default"/>
+
+    <!-- 引入其他子配置 -->
+    <include file="org/gitshu/user/action/struts-user.xml"/>
+    <include file="org/gitshu/mail/action/struts-mail.xml"/>
+
+</struts>

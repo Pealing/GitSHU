@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="mail" namespace="/mail" extends="default">
+        <action name="sendMail" class="org.gitshu.mail.action.SendMail">
+            <result name="success">outBox.jsp</result>
+            <result name="error">sendMail.jsp</result>
+        </action>
+        <action name="outbox" class="org.gitshu.mail.action.Outbox">
+            <result name="success">outBox.jsp</result>
+        </action>
+        <action name="inbox" class="org.gitshu.mail.action.Inbox">
+            <result name="success">inBox.jsp</result>
+        </action>
+        <action name="readMail" class="org.gitshu.mail.action.ReadMail">
+            <result name="success">mailContent.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="user" namespace="/user" extends="default">
+
+        <action name="checkUsername" class="org.gitshu.user.action.CheckUsername">
+            <result name="done">checkUsername.jsp</result>
+        </action>
+
+        <action name="register" class="org.gitshu.user.action.UserRegister">
+            <result name="success">login.jsp</result>
+            <result name="error">register.jsp</result>
+        </action>
+
+        <action name="login" class="org.gitshu.user.action.UserLogin">
+            <result name="success">profiles.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+
+        <action name="logout" class="org.gitshu.user.action.UserLogout">
+            <result name="success">/index.jsp</result>
+        </action>
+
+        <action name="updateProfile" class="org.gitshu.user.action.ProfileUpdate">
+            <result name="success">profiles-edit.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+
+        <action name="resetPassword" class="org.gitshu.user.action.PasswordReset">
+            <result name="success">password-reset.jsp</result>
+            <result name="error">checkPassword.jsp</result>
+        </action>
+
+    </package>
+</struts>
