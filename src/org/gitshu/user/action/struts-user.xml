@@ -17,7 +17,7 @@
         </action>
 
         <action name="login" class="org.gitshu.user.action.UserLogin">
-            <result name="success">profiles.jsp</result>
+            <result name="success">/profile/profiles.jsp</result>
             <result name="error">login.jsp</result>
         </action>
 
@@ -33,6 +33,10 @@
         <action name="resetPassword" class="org.gitshu.user.action.PasswordReset">
             <result name="success">password-reset.jsp</result>
             <result name="error">checkPassword.jsp</result>
+        </action>
+
+        <action name="userEntitySet" class="org.gitshu.user.action.UserEntitySet">
+            <result name="success">profiles-edit.jsp</result>
         </action>
 
     </package>

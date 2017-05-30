@@ -20,7 +20,6 @@
     <!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-    <script stc="/static/js/npm.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>GitSHU Banner</title>
 </head>
@@ -33,7 +32,7 @@
             <%
                 if (!"".equals(session.getAttribute("username"))) {
             %>
-            <li><a href="../user/profiles.jsp">返回主页</a></li>
+            <li><a href="../profile/profiles.jsp">返回主页</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                    aria-expanded="false"><span class="glyphicon glyphicon-plus"></span><span class="caret"></span></a>

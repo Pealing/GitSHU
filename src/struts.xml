@@ -18,5 +18,8 @@
     <!-- 引入其他子配置 -->
     <include file="org/gitshu/user/action/struts-user.xml"/>
     <include file="org/gitshu/mail/action/struts-mail.xml"/>
+    <include file="org/gitshu/project/action/struts-project.xml"/>
+    <include file="org/gitshu/workflow/action/struts-workflow.xml"/>
+
 
 </struts>

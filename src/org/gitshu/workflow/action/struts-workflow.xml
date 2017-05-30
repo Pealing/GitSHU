@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="workflow" namespace="/workflow" extends="default">
+        <action name="WorkflowView" class="org.gitshu.workflow.action.WorkflowView">
+            <result name="success">workflowView.jsp</result>
+        </action>
+        <action name="WorkflowCreate" class="org.gitshu.workflow.action.WorkflowCreate">
+            <result name="success" type="redirect">
+                <param name="location">workflowView.jsp</param>
+                <param name="projectId">${projectId}</param>
+            </result>
+        </action>
+        <action name="WorkflowDelete" class="org.gitshu.workflow.action.WorkflowDelete">
+            <result name="success" type="redirect">
+                <param name="location">workflowView.jsp</param>
+                <param name="projectId">${projectId}</param>
+            </result>
+        </action>
+        <action name="WorkflowStatusUpdate" class="org.gitshu.workflow.action.WorkflowStatusUpdate">
+            <result name="success" type="redirect">
+                <param name="location">workflowView.jsp</param>
+                <param name="projectId">${projectId}</param>
+            </result>
+        </action>
+    </package>
+</struts>

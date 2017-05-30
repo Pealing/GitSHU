@@ -85,10 +85,10 @@ CREATE TABLE workflow (
 # DROP TABLE IF EXISTS repository;
 # CREATE TABLE repository (
 #   id      INTEGER   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-#   project INTEGER   NOT NULL,
+#   org.gitshu.project INTEGER   NOT NULL,
 #   name    CHAR(255) NOT NULL,
 #   info    TEXT,
-#   CONSTRAINT FOREIGN KEY (project) REFERENCES project (id)
+#   CONSTRAINT FOREIGN KEY (org.gitshu.project) REFERENCES org.gitshu.project (id)
 # )
 #   DEFAULT CHARSET = utf8;
 #

@@ -44,34 +44,5 @@ $(document).ready(function ($) {
         $("#CheckUser").empty();
     });
 
-
-    // 添加一个工作结点
-    $('#addworknode').click(function (event) {
-        var name = $('#nodename').val();
-        if (name == "")
-            return;
-        var h = $('<button type="button" class="btn btn-warning" style="max-width: 300px; margin-top:5%;">' + name + '</button></br>');
-        h.attr({
-            id: name,
-        });
-        $('#worktree').append(h);
-    });
-    //完成一个结点
-    $("#nodecomplete").click(function (event) {
-        var name = $('#panel_nodename').text();
-        $("#" + name).attr("class", "btn btn-success");
-    });
-    //过程一个结点
-    $("#nodeprogress").click(function (event) {
-        var name = $('#panel_nodename').text();
-        $("#" + name).attr("class", "btn btn-warning");
-    });
-    $("#nodedelete").click(function (event) {
-        var name = $('#panel_nodename').text();
-        var h = "#" + name;
-        $(h).slideUp("slow", function () {//slide up
-            $(this).remove();//then remove from the DOM
-        });
-    });
 });
     
